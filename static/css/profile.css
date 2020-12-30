@@ -1,0 +1,46 @@
+ul li{
+	list-style-type: none;
+}
+
+#deppage #main #profile{
+	color: #1AA6B7;
+}
+
+#deppage #main #profile strong{
+	color: #002D40;
+}
+
+#deppage #main #profile #name{
+	font-size: 2.5em;
+	margin-top: 100px;
+	margin-bottom: 20px;
+	color: #002D40;
+}
+
+#deppage #main #profile #edit, #deppage #main #profile #chat{
+	font-size: 1.5vw;
+	margin-top: 100px;
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#deppage #main #profile #edit a.btn{
+	background-color: #FF414D;
+	color: #D9ECF2;
+}
+
+#deppage #main #profile #chat a.btn{
+	background-color: #1AA6B7;
+	color: #D9ECF2;
+}
+
+#deppage #main #profile #heading strong{
+	color: #FF414D;
+}
+
+#deppage #main #profile #profiledetails{
+	margin-top: 70px;
+	margin-bottom: 70px;
+}

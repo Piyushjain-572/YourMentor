@@ -1,0 +1,47 @@
+{% extends 'base/afterlogin.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container" id="profile">
+	<div class="row">
+        <div class="col-lg-8" id="name">
+        	<img class="img-responsive profile-pic" src="{{s.profile_pic.url}}">
+        	<span style="margin-left: 20px;">{{request.user.get_full_name}}</span>
+        </div>
+        <div class="col-lg-3" id="edit"><a href="{% url 'accountSettingsstudent' %}" class="btn">Account Settings</a></div>
+        <div class="col-lg-1" id="chat"><a href="https://mysterious-atoll-60958.herokuapp.com/" class="btn">Chat</a></div>
+	</div>
+	<hr>
+	<div class="row" id="profiledetails">
+		<div class="col-sm-6">
+			<div><strong>Branch: </strong>{{s.Department}}</div>
+			<div><strong>RollNo.: </strong>{{s.RollNo}}</div>
+			<div><strong>Current Year: </strong>{{s.Year_of_study}}</div>
+			<br><br>
+			<div id="heading"><strong>USER DETAILS</strong></div>
+			<hr>
+			<div>
+				<ul class="list-group">
+					<li><strong>First Name: </strong>{{request.user.first_name}}</li>
+					<li><strong>Last Name: </strong>{{request.user.last_name}}</li>
+					<li><strong>Email Address: </strong>{{request.user.email}}</li>
+					<li><strong>No. of Enrolled Courses: </strong>{{count}}</li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-sm-6">
+			<div id="heading"><strong>COURSE DETAILS</strong></div>
+			<hr>
+			<div>
+				<ul class="list-group">
+					{% for i in courses %}
+					<li>{{i.Name}}</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
